@@ -1,0 +1,14 @@
+[
+  { "ParameterKey": "BaseRoute", "ParameterValue": "/jenkins" },
+  { "ParameterKey": "Cluster", "ParameterValue": "us-east-1-dev01-cluster" },
+  { "ParameterKey": "ExecutionRoleArn", "ParameterValue": "arn:aws:iam::047362787997:role/us-east-1-dev01-ecs-role" },
+  { "ParameterKey": "ImageUri", "ParameterValue": "047362787997.dkr.ecr.us-east-1.amazonaws.com/bhtp/jenkins:latest" },
+  {
+      "ParameterKey": "ListenerArn",
+      "ParameterValue": "arn:aws:elasticloadbalancing:us-east-1:047362787997:listener/app/us-east-1-dev01-lb/7723a463c9466a6a/e721c9c97677ea17"
+  },
+  { "ParameterKey": "ListenerRulePriority", "ParameterValue": "5" },
+  { "ParameterKey": "SecurityGroups", "ParameterValue": "sg-5ac0f22f" },
+  { "ParameterKey": "Subnets", "ParameterValue": "subnet-8ee0c3c7,subnet-21640f7a" },
+  { "ParameterKey": "VpcId", "ParameterValue": "vpc-773f8611" }
+]
