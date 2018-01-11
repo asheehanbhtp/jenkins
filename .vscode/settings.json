@@ -1,0 +1,11 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+
+// TypeScipt
+
+  // Check if a global install TypeScript compiler (e.g. tsc) differs from the used TypeScript language service.
+  "typescript.check.tscVersion": true,
+
+  // Specifies the folder path containing the tsserver and lib*.d.ts files to use.
+  "typescript.tsdk": "./node_modules/typescript/lib"
+}

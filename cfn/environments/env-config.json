@@ -1,0 +1,15 @@
+{
+    "Parameters": {
+        "BaseRoute": "",
+        "Cluster": "",
+        "ExecutionRoleArn": "",
+        "ImageUri": {
+            "Fn::GetParam": [ "MyAppBuild", "build.json", "Image" ]
+        },
+        "ListenerArn": "",
+        "ListenerRulePriority": "",
+        "SecurityGroups": "",
+        "Subnets": "",
+        "VpcId": ""
+    }
+}
