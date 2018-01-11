@@ -6,6 +6,7 @@ import { Container } from 'typedi';
 useContainer(Container);
 
 const app: express.Application = createExpressServer({
+    routePrefix: 'jenkins',
     controllers: [ `${__dirname}/**/*.controller.{js,ts}` ]
 });
 
