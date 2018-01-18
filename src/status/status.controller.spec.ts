@@ -16,7 +16,7 @@ describe('StatusController', () => {
 
     describe('getStatus', () => {
         it("provides the DeLorean's speed, app name, and google availability", async () => {
-            const expected = { app: 'Jenkins', deloreanSpeed: '88 mph', google: false };
+            const expected = { app: 'Jenkins', deloreanSpeed: '88 mph', google: true };
             const result = await controller.getStatus();
 
             assert.deepEqual(result, expected);
