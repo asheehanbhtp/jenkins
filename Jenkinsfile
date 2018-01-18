@@ -7,6 +7,16 @@ pipeline {
     }
 
     stages {
+        stage('Unit Test') {
+            steps {
+                script {
+                    sh '''#!/bin/bash
+                    npm install
+                    npm test'''
+                }
+            }
+        }
+
         stage('Build Image') {
             steps {
                 script {
@@ -55,6 +65,12 @@ pipeline {
                 sh '''
                     echo "Testing..."'''
             }
+        }
+    }
+
+    post {
+        always {
+            junit 'coverage/**/*.xml'
         }
     }
 }
