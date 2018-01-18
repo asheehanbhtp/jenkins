@@ -35,7 +35,7 @@
     "prestart": "nsp check",
     "start": "ts-node --cache --cache-directory=.ts-node --inspect=0.0.0.0:9229 ./src/index.ts",
     "start:watch": "nodemon -e ts --ignore \"src/**/*.spec.ts\" --exec npm start",
-    "test": "XUNIT_FILE=coverage/xunit.xml nyc mocha -r ts-node/register \"src/**/*.spec.ts\" --reporter xunit-file",
+    "test": "XUNIT_FILE=coverage/mocha.xml nyc mocha -r ts-node/register \"src/**/*.spec.ts\" --reporter xunit-file",
     "test:watch": "npm test -- --watch --watch-extensions ts",
     "heroku-postbuild": "npm run build",
     "prebuild": "npm run clean && npm run lint && npm test",

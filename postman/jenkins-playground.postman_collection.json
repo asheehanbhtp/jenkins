@@ -1,0 +1,65 @@
+{
+	"info": {
+		"name": "Jenkins Playground",
+		"_postman_id": "2254406a-461a-b199-1f06-8b93ac6c0e71",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Status",
+			"description": "",
+			"item": [
+				{
+					"name": "Get Status",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "49011209-1019-4d3b-9670-e80bb153a4ad",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"if (pm.response.code === 200) {",
+									"    var data = pm.response.json();",
+									"    ",
+									"    pm.test('App name is AWS Containers', function() {",
+									"        pm.expect(data.app).to.eql('Jenkins');",
+									"    });",
+									"    ",
+									"    pm.test('Delorean speed is 88mph', function() {",
+									"        pm.expect(data.deloreanSpeed).to.eql('88 mph');",
+									"    });",
+									"    ",
+									"    pm.test('We did not reach Google', function() {",
+									"        pm.expect(data.google).to.eql(true);",
+									"    });",
+									"}"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{jenkins-playground.uri}}/status",
+							"host": [
+								"{{jenkins-playground.uri}}"
+							],
+							"path": [
+								"status"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

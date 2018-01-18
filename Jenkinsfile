@@ -10,9 +10,8 @@ pipeline {
         stage('Unit Test') {
             steps {
                 script {
-                    sh '''#!/bin/bash
-                    npm install
-                    npm test'''
+                    sh 'npm install'
+                    sh 'npm test'
                 }
             }
         }
@@ -62,8 +61,7 @@ pipeline {
             }
 
             steps {
-                sh '''
-                    echo "Testing..."'''
+                sh 'newman run postman/jenkins-playground.postman_collection.json -e postman/dev01.postman_environment.json -r cli,junit --reporter-junit-export coverage/postman.xml'
             }
         }
     }
