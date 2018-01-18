@@ -5,7 +5,6 @@ import { StatusController } from './status.controller';
 import { StatusService } from './status.service';
 
 describe('StatusController', () => {
-
     let controller: StatusController;
     let serviceMock: IMock<StatusService>;
 
@@ -16,9 +15,8 @@ describe('StatusController', () => {
     });
 
     describe('getStatus', () => {
-
-        it('provides the DeLorean\'s speed, app name, and google availability', async () => {
-            const expected = { app: 'Jenkins', deloreanSpeed: '88 mph', google: true };
+        it("provides the DeLorean's speed, app name, and google availability", async () => {
+            const expected = { app: 'Jenkins', deloreanSpeed: '88 mph', google: false };
             const result = await controller.getStatus();
 
             assert.deepEqual(result, expected);
@@ -34,5 +32,4 @@ describe('StatusController', () => {
             assert.deepEqual(result, expected);
         });
     });
-
 });
