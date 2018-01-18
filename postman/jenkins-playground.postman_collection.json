@@ -35,7 +35,7 @@
 									"    });",
 									"    ",
 									"    pm.test('We did not reach Google', function() {",
-									"        pm.expect(data.google).to.eql(true);",
+									"        pm.expect(data.google).to.eql(false);",
 									"    });",
 									"}"
 								]
